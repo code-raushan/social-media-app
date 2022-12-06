@@ -2,7 +2,7 @@ import React from 'react'
 import './Navbar.css'
 import {Link} from 'react-router-dom'
 import { auth } from '../../config/firebase'
-import {useAuthState} from 'react-firebase-hooks/auth'
+import {useAuthState} from 'react-firebase-hooks/auth' //react-firebase-hook
 import {signOut} from 'firebase/auth'
 
 const Navbar = () => {
@@ -15,7 +15,8 @@ const Navbar = () => {
     <div className='nav'>
         <div className="links">
           <Link to="/">Home</Link>
-          <Link to="/login">Login</Link>
+          {!user? <Link to="/login">Login</Link>:<Link to="/createpost">Create Post</Link>}
+          
         </div>
         <div className='user'>
             {user && (<>
