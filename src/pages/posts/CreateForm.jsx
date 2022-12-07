@@ -20,9 +20,11 @@ export const CreateForm = ()=>{
     const {register, handleSubmit, formState: {errors}} = useForm({
         resolver: yupResolver(schema)
     });
-
-    const postRef = collection(db, "posts");
     
+    //collection reference
+    const postRef = collection(db, "posts"); 
+    
+    //addDoc(ref, data): Add a new document to specified CollectionReference with the given data, assigning it a document ID automatically.
     const onCreatePost = async(data) =>{
         await addDoc(postRef, {
             title: data.title,

@@ -18,11 +18,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export const auth = getAuth()
 //Returns the Auth instance associated with the provided @firebase/app#FirebaseApp. If no instance exists, initializes an Auth instance with platform-specific default dependencies.
+export const auth = getAuth(app)
 
-export const provider = new GoogleAuthProvider();
 //Provider for generating an an OAuthCredential for ProviderId.GOOGLE.
+export const provider = new GoogleAuthProvider();
 
-export const db = getFirestore(app)
 //Returns the existing default Firestore instance that is associated with the default @firebase/app#FirebaseApp
+export const db = getFirestore(app)
