@@ -1,0 +1,12 @@
+.post{
+    height: fit-content;
+    width: fit-content;
+    border: 2px solid red;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: sans-serif;
+    gap: 0.5rem;
+}

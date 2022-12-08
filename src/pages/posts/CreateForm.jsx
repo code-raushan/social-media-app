@@ -20,8 +20,9 @@ export const CreateForm = ()=>{
     const {register, handleSubmit, formState: {errors}} = useForm({
         resolver: yupResolver(schema)
     });
-    
-    //collection reference
+
+    // following function returns collection reference
+    //posts is the path on the collection in firestore db.
     const postRef = collection(db, "posts"); 
     
     //addDoc(ref, data): Add a new document to specified CollectionReference with the given data, assigning it a document ID automatically.

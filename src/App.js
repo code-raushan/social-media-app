@@ -4,7 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import CreatePost from './pages/posts/CreatePost';
 import LoginPage from './pages/LoginPage';
-import MainPage from './pages/MainPage';
+import MainPage from './pages/main/MainPage';
 
 function App() {
   return (

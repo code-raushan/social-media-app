@@ -15,6 +15,7 @@ const Navbar = () => {
     <div className='nav'>
         <div className="links">
           <Link to="/">Home</Link>
+          {/* condtional rendering */}
           {!user? <Link to="/login">Login</Link>:<Link to="/createpost">Create Post</Link>}
           
         </div>
